@@ -1,0 +1,27 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+C_SRCS += \
+../Sources/APP_bootloader_exchange_info/boot/src/boot.c \
+../Sources/APP_bootloader_exchange_info/boot/src/boot_Cfg.c 
+
+OBJS += \
+./Sources/APP_bootloader_exchange_info/boot/src/boot.o \
+./Sources/APP_bootloader_exchange_info/boot/src/boot_Cfg.o 
+
+C_DEPS += \
+./Sources/APP_bootloader_exchange_info/boot/src/boot.d \
+./Sources/APP_bootloader_exchange_info/boot/src/boot_Cfg.d 
+
+
+# Each subdirectory must supply rules for building sources it contributes
+Sources/APP_bootloader_exchange_info/boot/src/%.o: ../Sources/APP_bootloader_exchange_info/boot/src/%.c
+	@echo 'Building file: $<'
+	@echo 'Invoking: Standard S32DS C Compiler'
+	powerpc-eabivle-gcc "@Sources/APP_bootloader_exchange_info/boot/src/boot.args" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+
