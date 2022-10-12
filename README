@@ -1,0 +1,6 @@
+1. This is a demo for DEVKIT-MPC5744P REV_E and the IDE is S32 Design Studio for Power Architecture Version 2.1.
+2. The upper monitor is ECUBus. (GitHub: https://github.com/frankie-zeng/ECUBus). For more infomation, you can refer to the NXP community.
+3. This project bases on "unified_bootloader_demo_V2.0" from NXP.
+4. When the APP is downloading and it comes to RoutineControl(0x31), the ECUBus would show "Error No response". The reason is the erasing progress would take a long time(nearly 6 seconds).
+However the error can be ignore and it doesn't influence other service.
+5. There are still some problems when FLASH_DRV_SetLock and FLASH_DRV_GetLock functions is running in RAM. As a result, these functions are placed in flash in this version. FLASH_DRV_Erase, FLASH_DRV_Program and other drivers are placed in RAM. The FLASH_DRV_Erase is modified to run in RAM.
